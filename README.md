@@ -11,6 +11,18 @@ Summary: Jansson is a C library for encoding, decoding and manipulating JSON dat
 
 
 
+Current build status
+====================
+
+Linux: [![Circle CI](https://circleci.com/gh/conda-forge/jansson-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/jansson-feedstock)
+OSX: [![TravisCI](https://travis-ci.org/conda-forge/jansson-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/jansson-feedstock)
+Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/jansson-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/jansson-feedstock/branch/master)
+
+Current release info
+====================
+Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/jansson/badges/version.svg)](https://anaconda.org/conda-forge/jansson)
+Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/jansson/badges/downloads.svg)](https://anaconda.org/conda-forge/jansson)
+
 Installing jansson
 ==================
 
@@ -31,7 +43,6 @@ It is possible to list all of the versions of `jansson` available on your platfo
 ```
 conda search jansson --channel conda-forge
 ```
-
 
 
 About conda-forge
@@ -67,18 +78,6 @@ Terminology
 
 **conda-forge** - the place where the feedstock and smithy live and work to
                   produce the finished article (built conda distributions)
-
-Current build status
-====================
-
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/jansson-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/jansson-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/jansson-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/jansson-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/jansson-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/jansson-feedstock/branch/master)
-
-Current release info
-====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/jansson/badges/version.svg)](https://anaconda.org/conda-forge/jansson)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/jansson/badges/downloads.svg)](https://anaconda.org/conda-forge/jansson)
 
 
 Updating jansson-feedstock
