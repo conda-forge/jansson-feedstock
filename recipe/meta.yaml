@@ -16,6 +16,8 @@ build:
 requirements:
     build:
         - cmake
+        - compiler('c')
+        - compiler('cxx')
 
 test:
     commands:
