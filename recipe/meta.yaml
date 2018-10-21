@@ -11,11 +11,13 @@ source:
     sha1: 0c99636416499960214ce6c095d26af541d3c244
 
 build:
-    number: 0
+    number: 1
 
 requirements:
     build:
         - cmake
+        - {{ compiler('c') }}
+    host:
 
 test:
     commands:
@@ -24,6 +26,7 @@ test:
 about:
     home: https://github.com/akheron/jansson
     license: MIT
+    license_file: LICENSE
     summary: 'Jansson is a C library for encoding, decoding and manipulating JSON data.'
 
 extra:
