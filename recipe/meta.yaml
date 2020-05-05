@@ -1,35 +1,35 @@
 # Jinja variables help maintain the recipe as you'll update the version only here.
-{% set version = "2.11" %}
+{% set version = "2.13" %}
 
 package:
-    name: jansson
-    version: {{ version }}
+  name: jansson
+  version: {{ version }}
 
 source:
-    fn: jansson-{{ version }}.tar.gz
-    url: http://www.digip.org/jansson/releases/jansson-{{ version }}.tar.gz
-    sha1: 0c99636416499960214ce6c095d26af541d3c244
+  fn: jansson-{{ version }}.tar.gz
+  url: http://www.digip.org/jansson/releases/jansson-{{ version }}.tar.gz
+  sha1: 771449d48f08e50ec1b8afe8bb55d277961fbe7e
 
 build:
-    number: 1001
+  number: 0
 
 requirements:
-    build:
-        - make
-        - cmake
-        - {{ compiler('c') }}
-    host:
+  build:
+    - make
+    - cmake
+    - {{ compiler('c') }}
+  host:
 
 test:
-    commands:
-        - test -f ${PREFIX}/lib/libjansson.a  # [unix]
+  commands:
+    - test -f ${PREFIX}/lib/libjansson.a      # [unix]
 
 about:
-    home: https://github.com/akheron/jansson
-    license: MIT
-    license_file: LICENSE
-    summary: 'Jansson is a C library for encoding, decoding and manipulating JSON data.'
+  home: https://github.com/akheron/jansson
+  license: MIT
+  license_file: LICENSE
+  summary: Jansson is a C library for encoding, decoding and manipulating JSON data.
 
 extra:
-    recipe-maintainers:
-        - mariusvniekerk
+  recipe-maintainers:
+    - mariusvniekerk
