@@ -19,7 +19,8 @@ requirements:
     - autoconf  # [not win]
     - libtool   # [not win]
     - make      # [not win]
-    - autotools_clang_conda  # [win]
+    - cmake     # [win]
+    - ninja     # [win]
     - {{ compiler('c') }}
   host:
 
