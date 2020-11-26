@@ -15,10 +15,11 @@ build:
 
 requirements:
   build:
-    - automake
-    - autoconf
-    - libtool
-    - make
+    - automake  # [not win]
+    - autoconf  # [not win]
+    - libtool   # [not win]
+    - make      # [not win]
+    - autotools_clang_conda  # [win]
     - {{ compiler('c') }}
   host:
 
