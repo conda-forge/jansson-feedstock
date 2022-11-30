@@ -26,6 +26,7 @@ requirements:
 
 test:
   commands:
+    - make check || { cat "${SRC_DIR}/test/test-suite.log"; exit 1; }
     - test ! -f ${PREFIX}/lib/libjansson.a  # [unix]
     - test -f ${PREFIX}/lib/libjansson${SHLIB_EXT}  # [unix]
 
