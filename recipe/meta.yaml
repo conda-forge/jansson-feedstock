@@ -25,16 +25,7 @@ requirements:
   host:
 
 test:
-  requires:
-    - automake  # [not win]
-    - autoconf  # [not win]
-    - libtool   # [not win]
-    - make      # [not win]
-    - cmake     # [win]
-    - ninja     # [win]
-    - {{ compiler('c') }}
   commands:
-    - make check || { cat "${SRC_DIR}/test/test-suite.log"; exit 1; }
     - test ! -f ${PREFIX}/lib/libjansson.a  # [unix]
     - test -f ${PREFIX}/lib/libjansson${SHLIB_EXT}  # [unix]
 
