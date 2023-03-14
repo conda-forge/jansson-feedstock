@@ -1,11 +1,11 @@
-About jansson
-=============
+About jansson-feedstock
+=======================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/jansson-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/akheron/jansson
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/jansson-feedstock/blob/main/LICENSE.txt)
 
 Summary: Jansson is a C library for encoding, decoding and manipulating JSON data.
 
