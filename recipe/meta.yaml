@@ -9,16 +9,17 @@ source:
   sha256: c739578bf6b764aa0752db9a2fdadcfe921c78f1228c7ec0bb47fa804c55d17b
 
 build:
-  number: 0
+  number: 1
   run_exports:
     - {{ pin_subpackage('jansson', max_pin='x') }}
 
 requirements:
   build:
-    - automake  # [not win]
-    - autoconf  # [not win]
-    - libtool   # [not win]
-    - make      # [not win]
+    - gnuconfig   # [unix]
+    - automake  # [unix]
+    - autoconf  # [unix]
+    - libtool   # [unix]
+    - make      # [unix]
     - cmake     # [win]
     - ninja     # [win]
     - {{ compiler('c') }}

@@ -15,4 +15,6 @@ EOF
 chmod +x test/suites/api/check-exports
 
 make install
-make check || { cat "${SRC_DIR}/test/test-suite.log"; exit 1; }
+if [[ "$CONDA_BUILD_CROSS_COMPILATION" != "1" ]]; then
+    make check || { cat "${SRC_DIR}/test/test-suite.log"; exit 1; }
+fi
