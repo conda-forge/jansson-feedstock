@@ -23,6 +23,7 @@ requirements:
     - cmake     # [win]
     - ninja     # [win]
     - {{ compiler('c') }}
+    - {{ stdlib('c') }}
   host:
 
 test:
