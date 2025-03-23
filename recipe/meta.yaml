@@ -1,4 +1,4 @@
-{% set version = "2.14" %}
+{% set version = "2.14.1" %}
 
 package:
   name: jansson
@@ -6,10 +6,10 @@ package:
 
 source:
   url: https://github.com/akheron/jansson/archive/v{{ version }}.tar.gz
-  sha256: c739578bf6b764aa0752db9a2fdadcfe921c78f1228c7ec0bb47fa804c55d17b
+  sha256: 979210eaffdffbcf54cfc34d047fccde13f21b529a381df26db871d886f729a4
 
 build:
-  number: 1
+  number: 0
   run_exports:
     - {{ pin_subpackage('jansson', max_pin='x') }}
 
