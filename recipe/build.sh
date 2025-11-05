@@ -1,14 +1,10 @@
 #!/bin/bash
 set -exo pipefail
 
-# Create an out-of-source build dir
 mkdir -p "${SRC_DIR}/build"
 pushd "${SRC_DIR}/build"
 
-# Configure CMake.
-# - Build shared libs to match the original configure --disable-static
-# - Set install prefix to PREFIX provided by conda-build
-# - Set CMake policy minimum for compatibility similar to the windows .bat
+# This also sets the minimum CMake policy version to 3.5 for compatibility. Can be removed with >2.14.1
 cmake -G Ninja \
       -DJANSSON_BUILD_SHARED_LIBS=ON \
       -DCMAKE_INSTALL_PREFIX="${PREFIX}" \
