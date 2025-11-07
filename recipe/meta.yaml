@@ -15,8 +15,13 @@ build:
 
 requirements:
   build:
-    - cmake     
-    - ninja     
+    - gnuconfig   # [unix]
+    - automake  # [unix]
+    - autoconf  # [unix]
+    - libtool   # [unix]
+    - make      # [unix]
+    - cmake     # [win]
+    - ninja     # [win]   
     - {{ compiler('c') }}
     - {{ stdlib('c') }}
   host:
