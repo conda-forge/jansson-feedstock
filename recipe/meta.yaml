@@ -21,7 +21,7 @@ requirements:
     - libtool   # [unix]
     - make      # [unix]
     - cmake     # [win]
-    - ninja     # [win]   
+    - ninja     # [win]
     - {{ compiler('c') }}
     - {{ stdlib('c') }}
   host:
