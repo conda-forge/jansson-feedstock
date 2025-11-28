@@ -18,3 +18,7 @@ make install
 if [[ "$CONDA_BUILD_CROSS_COMPILATION" != "1" ]]; then
     make check || { cat "${SRC_DIR}/test/test-suite.log"; exit 1; }
 fi
+
+# Copy janssonConfig.cmake into the package
+mkdir -p ${PREFIX}/lib/cmake/jansson
+cp "${RECIPE_DIR}/janssonConfig.cmake" "${PREFIX}/lib/cmake/jansson/janssonConfig.cmake"
