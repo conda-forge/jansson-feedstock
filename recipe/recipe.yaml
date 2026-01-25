@@ -29,7 +29,6 @@ requirements:
         - ninja
     - ${{ compiler('c') }}
     - ${{ stdlib('c') }}
-  host:
   run_exports:
     - ${{ pin_subpackage('jansson', upper_bound='x') }}
 
