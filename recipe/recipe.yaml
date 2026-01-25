@@ -1,0 +1,51 @@
+schema_version: 1
+
+context:
+  version: 2.15.0
+
+package:
+  name: jansson
+  version: ${{ version }}
+
+source:
+  url: https://github.com/akheron/jansson/archive/v${{ version }}.tar.gz
+  sha256: 73ac12bbc62ff536e40c7a3e15ed007993c5ca4d23897de23f1906f891b5a4bb
+
+build:
+  number: 0
+
+requirements:
+  build:
+    - if: unix
+      then: 
+        - gnuconfig
+        - automake
+        - autoconf
+        - libtool
+        - make
+    - if: win
+      then:
+        - cmake
+        - ninja
+    - ${{ compiler('c') }}
+    - ${{ stdlib('c') }}
+  run_exports:
+    - ${{ pin_subpackage('jansson', upper_bound='x') }}
+
+tests:
+  - script:
+      - if: unix
+        then: test ! -f ${PREFIX}/lib/libjansson.a
+      - if: unix
+        then: test -f ${PREFIX}/lib/libjansson${SHLIB_EXT}
+
+about:
+  license: MIT
+  license_file: LICENSE
+  summary: Jansson is a C library for encoding, decoding and manipulating JSON data.
+  homepage: https://github.com/akheron/jansson
+
+extra:
+  recipe-maintainers:
+    - mariusvniekerk
+    - xhochy
