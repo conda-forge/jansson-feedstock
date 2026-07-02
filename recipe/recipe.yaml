@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  version: 2.15.0
+  version: "2.15.1"
 
 package:
   name: jansson
@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://github.com/akheron/jansson/archive/v${{ version }}.tar.gz
-  sha256: 73ac12bbc62ff536e40c7a3e15ed007993c5ca4d23897de23f1906f891b5a4bb
+  sha256: dbf95cb0af903f4fb8b61507d96b45b67db7d1479688ede352e1d571394d06f7
 
 build:
   number: 0
@@ -17,7 +17,7 @@ build:
 requirements:
   build:
     - if: unix
-      then: 
+      then:
         - gnuconfig
         - automake
         - autoconf
@@ -35,10 +35,9 @@ requirements:
 tests:
   - script:
       - if: unix
-        then: test ! -f ${PREFIX}/lib/libjansson.a
-      - if: unix
-        then: test -f ${PREFIX}/lib/libjansson${SHLIB_EXT}
-
+        then:
+          - test ! -f ${PREFIX}/lib/libjansson.a
+          - test -f ${PREFIX}/lib/libjansson${SHLIB_EXT}
 about:
   license: MIT
   license_file: LICENSE
